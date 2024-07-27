@@ -13,8 +13,11 @@
      <a href="/about">About</a>
      <h1>Halaman About</h1>
 
+     <h3>Owner yang sekarang: {{ $name }} </h3>
+
      <p>ini adalah halaman about yang di parsing menggunakan template engine nya php</p>
 
+     <h4>Ini adalah foto Dari aktris {{ $fotoTitle }}</h4>
      <img src="img/gyj.jpg" alt="" width="300">
 </body>
 </html>
