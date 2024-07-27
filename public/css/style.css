@@ -1,3 +1,16 @@
 body {
      background-color: lightblue;
 }
+
+a {
+     padding-right: 1rem;
+}
+
+.flexArtikel {
+     display: flex;
+}
+
+.flexKontak {
+     display: flex;
+     justify-content: space-around;
+}

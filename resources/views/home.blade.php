@@ -9,8 +9,11 @@
 </head>
 <body>
 
-     <a href="/" style="padding-right: 1rem">Home</a>
+     <a href="/">Home</a>
      <a href="/about">About</a>
+     <a href="/blog">Blog</a>
+     <a href="/kontak">Kontak</a>
+     
      <h1>Ini adalah halaman Home</h1>
 
      <p>halo nama kamu siapaa bro</p>

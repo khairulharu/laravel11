@@ -9,3 +9,11 @@ Route::get('/', function () {
 Route::get('/about', function(){
     return view('about', ['name' => 'Khairul Aswad', 'fotoTitle' => 'Go Youn Jung']);
 });
+
+Route::get('/blog', function() {
+    return view('blog');
+});
+
+Route::get('/kontak', function() {
+    return view('kontak');
+});
