@@ -14,7 +14,7 @@
      <a href="/blog">Blog</a>
      <a href="/kontak">Kontak</a>
 
-     
+
      <h1>Ini Adalah Halaman Kontak</h1>
      <div class="flexKontak">
           <div>
@@ -30,5 +30,17 @@
                <a href="#">Github</a>
           </div>
      </div>
+
+     <ul>
+          <li>
+               <a href="">Instagram</a>
+          </li>
+          <li>
+               <a href="">Youtube</a>
+          </li>
+          <li>
+               <a href="">X</a>
+          </li>
+     </ul>
 </body>
 </html>
