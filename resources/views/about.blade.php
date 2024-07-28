@@ -5,23 +5,26 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>Ini Adalah Halaman About</title>
-     <link rel="stylesheet" href="css/style.css">
+     @vite('resources/css/app.css')
+     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
+<body class="h-full">
 
-    
-     <a href="/">Home</a>
-     <a href="/about">About</a>
-     <a href="/blog">Blog</a>
-     <a href="/kontak">Kontak</a>
-     
-     <h1>Halaman About</h1>
-
-     <h3>Owner yang sekarang: {{ $name }} </h3>
-
-     <p>ini adalah halaman about yang di parsing menggunakan template engine nya php</p>
-
-     <h4>Ini adalah foto Dari aktris {{ $fotoTitle }}</h4>
-     <img src="img/gyj.jpg" alt="" width="300">
-</body>
+     <div class="min-h-full"> 
+   
+       <x-navbar></x-navbar>
+       
+       <x-header>Halaman About</x-header>
+   
+        <main>
+          <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <!-- Your content -->
+          </div>
+        </main>
+   
+   
+      </div>
+      
+   </body>
 </html>

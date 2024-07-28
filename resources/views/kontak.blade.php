@@ -5,42 +5,36 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>Kontak</title>
-     <link rel="stylesheet" href="css/style.css">
+     @vite('resources/css/app.css')
+     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
+<body class="h-full">
 
-     <a href="/">Home</a>
-     <a href="/about">About</a>
-     <a href="/blog">Blog</a>
-     <a href="/kontak">Kontak</a>
-
-
-     <h1>Ini Adalah Halaman Kontak</h1>
-     <div class="flexKontak">
-          <div>
-               <h3>Instagram</h3>
-               <a href="#">Instagram</a>
+     <div class="min-h-full"> 
+   
+       <x-navbar></x-navbar>
+       
+       <x-header>Halaman Kontak</x-header>
+   
+        <main>
+          <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <ul>
+               <li>
+                    <a href="">Instagram</a>
+               </li>
+               <li>
+                    <a href="">Youtube</a>
+               </li>
+               <li>
+                    <a href="">X</a>
+               </li>
+          </ul>
           </div>
-          <div>
-               <h3>Facebook</h3>
-               <a href="#">facebook</a>
-          </div>
-          <div>
-               <h3>Github</h3>
-               <a href="#">Github</a>
-          </div>
-     </div>
-
-     <ul>
-          <li>
-               <a href="">Instagram</a>
-          </li>
-          <li>
-               <a href="">Youtube</a>
-          </li>
-          <li>
-               <a href="">X</a>
-          </li>
-     </ul>
-</body>
+        </main>
+   
+   
+      </div>
+      
+   </body>
 </html>
