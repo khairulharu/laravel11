@@ -23,6 +23,12 @@ Route::get('/posts', function() {
             'title' => 'Judul Artikel 2',
             'author' => 'Kim Haru Eyo',
             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quidem placeat eos excepturi vel consequuntur porro, eius velit atque? Excepturi perferendis consequatur at nemo voluptas qui minima rerum id minus!'
+        ],
+        [
+            'id' => 3,
+            'title' => 'Judul Artikel 3',
+            'author' => 'Kim Tai Ku',
+            'body' => 'Dolor sit amet consectetur adipisicing elit. Facere quidem placeat eos excepturi vel consequuntur porro, eius velit atque? Excepturi perferendis consequatur at nemo voluptas qui minima rerum id minus!'
         ]
     ]]);
 });
