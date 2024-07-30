@@ -33,6 +33,10 @@ Route::get('/posts', function() {
     ]]);
 });
 
+Route::get('posts/{id}', function($id){
+    dd($id);
+});
+
 Route::get('/kontak', function() {
     return view('kontak', ['titlePage' => 'Kontak']);
 });
