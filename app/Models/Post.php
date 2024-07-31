@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Arr;
+ 
 class Post 
 {
     public static function all() 
@@ -29,5 +31,16 @@ class Post
                 'body' => 'Dolor sit amet consectetur adipisicing elit. Facere quidem placeat eos excepturi vel consequuntur porro, eius velit atque? Excepturi perferendis consequatur at nemo voluptas qui minima rerum id minus!'
             ]
             ];
+    }
+
+    public static function find($slug):array
+    {
+          $post = Arr::first(static::all(), fn ($post) => $post['slug'] === $slug);
+
+          if (!$post) {
+               abort(404);
+          }
+
+          return $post;
     }
 }
