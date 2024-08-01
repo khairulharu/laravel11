@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -27,4 +28,8 @@ Route::get('/kontak', function() {
 
 Route::get('/authors/{user:username}', function (User $user){
     return view('posts', ['titlePage' => count($user->posts) . ' Article By '. $user->name, 'posts' => $user->posts]);
+});
+
+Route::get('/categories/{category:slug}', function (Category $category){
+    return view('posts', ['titlePage' => 'Articles in : '. $category->name, 'posts' => $category->posts]);
 });
