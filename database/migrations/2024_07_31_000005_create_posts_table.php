@@ -22,6 +22,10 @@ return new class extends Migration
                 table:'categories',
                 indexName:'posts_category_id'
             );
+            $table->foreignId('char_id')->constrained(
+                table:'chars',
+                indexName:'posts_char_id'
+            );
             $table->string('slug')->unique();
             $table->text('body');
             $table->timestamps();
