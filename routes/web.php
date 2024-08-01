@@ -34,7 +34,3 @@ Route::get('/authors/{user:username}', function (User $user){
 Route::get('/categories/{category:slug}', function (Category $category){
     return view('posts', ['titlePage' => 'Articles in : '. $category->name, 'posts' => $category->posts]);
 });
-
-Route::get('/chars/{char}', function (Char $char){
-    return view('posts', ['titlePage' =>' Char By '. $char->slug, 'posts' => $char->posts]);
-});
