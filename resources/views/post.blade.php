@@ -10,7 +10,7 @@
           <a class="text-base text-gray-500 hover:underline" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
           | {{ $post->created_at->diffForHumans() }}
           Char
-          <a class="text-base text-red-500 hover:underline" href="/char/{{ $post->char->id }}">{{ $post->char->slug }}</a>
+          <a class="text-base text-red-500 hover:underline" href="/chars/{{ $post->char->id }}">{{ $post->char->slug }}</a>
      </div>
      <p class="my-4 font-light">{{ $post['body'] }}</p>
 
