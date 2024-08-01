@@ -25,6 +25,6 @@ Route::get('/kontak', function() {
     return view('kontak', ['titlePage' => 'Kontak']);
 });
 
-Route::get('/authors/{user}', function (User $user){
-    return view('posts', ['titlePage' => 'Article By '. $user->name, 'posts' => $user->posts]);
+Route::get('/authors/{user:username}', function (User $user){
+    return view('posts', ['titlePage' => count($user->posts) . ' Article By '. $user->name, 'posts' => $user->posts]);
 });
