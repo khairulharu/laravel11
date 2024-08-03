@@ -7,7 +7,9 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home', ['titlePage' => 'Home']);
+    $posts = Post::latest()->get();
+    
+    return view('home', ['titlePage' => 'Home', 'posts' => $posts]);
 });
 
 Route::get('/about', function(){
