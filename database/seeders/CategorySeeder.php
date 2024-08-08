@@ -14,27 +14,26 @@ class CategorySeeder extends Seeder
     {
         Category::create([
             'name' => 'Web Design',
-            'slug' => 'web-design'
+            'slug' => 'web-design',
+            'color' => 'blue'
         ]);
 
         Category::create([
             'name' => 'Computer Science',
-            'slug' => 'computer-science'
+            'slug' => 'computer-science',
+            'color' => 'red'
         ]);
 
         Category::create([
             'name' => 'Agriculture',
-            'slug' => 'agriculture'
+            'slug' => 'agriculture',
+            'color' => 'green'
         ]);
 
         Category::create([
             'name' => 'Tech Design',
-            'slug' => 'tech-design'
-        ]);
-
-        Category::create([
-            'name' => 'Opto Brick',
-            'slug' => 'opto-brick'
+            'slug' => 'tech-design',
+            'color' => 'yellow'
         ]);
     }
 }

@@ -1,38 +1,47 @@
 <x-layout>
     <x-slot:slotTitlePage>{{ $titlePage }}</x-slot:slotTitlePage>
     <x-blog>
-        @foreach ($posts as $post)
-            <article class="flex max-w-xl flex-col items-start justify-between">
-                <div class="flex items-center gap-x-4 text-xs">
-                    <time datetime="2020-03-16" class="text-gray-500">{{ $post->created_at->diffForHumans() }}</time>
-                    <a href="/categories/{{ $post->category->slug }}"
-                        class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{{ $post->category->name }}</a>
-                </div>
-                <div class="group relative">
-                    <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                        <a href="/post/{{ $post->slug }}">
-                            <span class="absolute inset-0"></span>
-                            {{ $post->title }}
-                        </a>
-                    </h3>
-                    <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{{ Str::limit($post['body'], 150) }}
-                    </p>
-                </div>
-                <a href="/post/{{ $post->slug }}" class="text-s pt-1 font-semibold leading-6 text-gray-900 hover:text-gray-600">Read More &raquo;</a>
-                <div class="relative mt-8 flex items-center gap-x-4">
-                    <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt="" class="h-10 w-10 rounded-full bg-gray-50">
-                    <div class="text-sm leading-6">
-                        <p class="font-semibold text-gray-900">
-                            <a href="/authors/{{ $post->author->username }}">
-                                <span class="absolute inset-0"></span>
-                                {{ $post->author->name }}
+        <div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-4 lg:px-0">
+            <div class="grid gap-8  md:grid-cols-2 lg:grid-cols-3">
+                @foreach ($posts as $post)
+                    <article
+                        class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex justify-between items-center mb-5 text-gray-500">
+                            <a href="/categories/{{ $post->category->slug }}">
+                                <span
+                                    class="bg-{{ $post->category->color }}-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                                    {{ $post->category->name }}
+                                </span>
                             </a>
-                        </p>
-                        <p class="text-gray-600">{{ $post->author->username }}</p>
-                    </div>
-                </div>
-            </article>
-        @endforeach
+                            <span class="text-sm">{{ $post->created_at->diffForHumans() }}</span>
+                        </div>
+                        <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a
+                                href="/post/{{ $post->slug }}">{{ $post->title }}</a></h2>
+                        <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+                            {{ $post->body }}</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-4">
+                                <img class="w-7 h-7 rounded-full"
+                                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+                                    alt="Jese Leos avatar" />
+                                <span class="font-medium dark:text-white">
+                                    {{ $post->author->name }}
+                                </span>
+                            </div>
+                            <a href="/post/{{ $post->slug }}"
+                                class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+                                Read more
+                                <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        </div>
     </x-blog>
 </x-layout>
